@@ -7,8 +7,8 @@ import { Users } from '../users';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-user:Users
-  constructor() { }
+user:Users[];
+  constructor( public userNeeds:u) { }
 
   ngOnInit(): void {
   }
