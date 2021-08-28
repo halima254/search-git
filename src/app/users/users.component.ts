@@ -10,8 +10,8 @@ import { UsersService } from '../users.service';
 export class UsersComponent implements OnInit {
 user:Users[]=[];
   constructor( public userNeeds:UsersService) { }
-  findUser(){
-    this.userNeeds.findUser().then(
+  findUser( provideUser:any){
+    this.userNeeds.findUser(provideUser).then(
       (success)=>{
         this.user=this.userNeeds.user
       },

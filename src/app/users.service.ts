@@ -13,10 +13,10 @@ export class UsersService {
 
   token = `access_token = ${environment.accessToken}`
   constructor(private Http: HttpClient) { }
-  findUser(){
+  findUser(provideUser:any){
     return new Promise((resolve, reject) => {
       this.user=[];
-      this.Http.get(this.myUrl+this.token).toPromise().then(
+      this.Http.get(this.myUrl+provideUser+this.token).toPromise().then(
         (data:any)=>{
           this.user.push(data);
           // resolve();
