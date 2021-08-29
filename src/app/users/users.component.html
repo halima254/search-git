@@ -1,1 +1,10 @@
-<p>users works!</p>
+
+<app-search (searchEmmiter)="createUser($event)"></app-search>
+<div *ngFor = "let details of person">
+    <h2>{{details.login}}</h2>
+    <img src="{{details.avatar_url}}" alt="image">
+    <h3>Bio:{{details.bio}}</h3>
+    <h4>Followers:{{details.followers}}</h4>
+    <h4>Following:{{details.following}}</h4>
+    <h4>Repositories:{{details.public_repos}}</h4>
+</div>

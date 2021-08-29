@@ -8,22 +8,24 @@ import { UsersService } from '../users.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-user:Users[]=[];
+person:Users[]=[];
   constructor( public userNeeds:UsersService) { }
-  findUser( provideUser:any){
-    this.userNeeds.findUser(provideUser).then(
+  createUser( seeUser:any){
+    this.userNeeds.findUser(seeUser).then(
       (success)=>{
-        this.user=this.userNeeds.user
+        this.person=this.userNeeds.user
+        console.log(this.person);
       },
       (error)=>{
         return console.error;
         
       }
     )
+  
   }
 
   ngOnInit(): void {
-    this.findUser('halima254');
+    this.createUser('halima254');
   }
 
 }

@@ -9,17 +9,31 @@ import { Users } from './users';
 })
 export class UsersService {
   user:Users[]=[];
-  myUrl='https://api.github.com/users'
+  myUrl='https://api.github.com/users/';
 
-  token = `access_token = ${environment.accessToken}`
+  token = `?access_token=${environment.accessToken}`;
   constructor(private Http: HttpClient) { }
-  findUser(provideUser:any){
-    return new Promise((resolve, reject) => {
+
+
+
+  findUser(seeUser:any){
+    interface data{
+      login:any;
+      avatar_url:any;
+      public_repos: any;
+      followers: any;
+      following:any;
+      name: any;
+      created_at: any;
+      updated_at: any;
+    }
+    return new Promise <void>((resolve, reject) => {
       this.user=[];
-      this.Http.get<data>(this.myUrl+provideUser+this.token).toPromise().then(
+      this.Http.get <data>(this.myUrl+seeUser+this.token).toPromise().then(
         (data:any)=>{
           this.user.push(data);
-          // resolve();
+          resolve();
+          console.log(data)
         },
         (error)=>{
      reject();
