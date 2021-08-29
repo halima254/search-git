@@ -1,7 +1,14 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomrComponent } from './homr/homr.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
+import { SearchComponent } from './search/search.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+{path: 'homr', component: HomrComponent},
+{path:'repositories', component:RepositoriesComponent},
+{path:'search', component:SearchComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
