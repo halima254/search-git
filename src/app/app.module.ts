@@ -10,6 +10,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { UsersComponent } from './users/users.component';
 import { HomrComponent } from './homr/homr.component';
 import { ReposComponent } from './repos/repos.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReposComponent } from './repos/repos.component';
     RepositoriesComponent,
     UsersComponent,
     HomrComponent,
-    ReposComponent
+    ReposComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
