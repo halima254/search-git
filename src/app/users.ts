@@ -7,6 +7,7 @@ export class Users {
     name: any;
     created_at: any;
     updated_at: any;
+    bio:any;
 
 
 
