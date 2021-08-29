@@ -30,6 +30,7 @@ export class UsersService {
     return new Promise <void>((resolve, reject) => {
       this.user=[];
       this.Http.get <data>(this.myUrl+seeUser+this.token).toPromise().then(
+        
         (data:any)=>{
           this.user.push(data);
           resolve();

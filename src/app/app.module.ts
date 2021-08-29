@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { UsersComponent } from './users/users.component';
+import { HomrComponent } from './homr/homr.component';
+import { ReposComponent } from './repos/repos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     RepositoriesComponent,
-    UsersComponent
+    UsersComponent,
+    HomrComponent,
+    ReposComponent
   ],
   imports: [
     BrowserModule,
