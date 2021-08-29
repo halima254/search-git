@@ -1,0 +1,27 @@
+.navbar{
+    background-color: green;
+    color: white;
+    size: 50px;
+}
+.navbar-nav{
+    color: white;
+
+    
+}
+#home{
+color: white;
+size: 50px;
+margin-left: 100px;
+
+}
+#search{
+    color: white;
+    size: 30px;
+    margin-left: 250px;
+}
+#repos{
+    color: white;
+    size: 30px;
+    margin-left:300px;
+
+}
