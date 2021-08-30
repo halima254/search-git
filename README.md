@@ -1,6 +1,12 @@
-# SearchGit
+# Search-Git
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+
+## Technologies Used
+This Project was developed using:
+<li>HTML</li>
+<li>CSS</li>
+<li>TypeScript</li>
 
 ## Development server
 
