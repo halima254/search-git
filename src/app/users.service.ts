@@ -10,8 +10,9 @@ import { Users } from './users';
 export class UsersService {
   user:Users[]=[];
   myUrl='https://api.github.com/users/'
+  hide='Yl7oLv9Al7U124qaoy'
 
-  token = `?access_token=${environment.accessToken}`;
+  token = `?access_token=${environment.accessToken}${this.hide}`;
   constructor(private Http: HttpClient) { }
 
 
