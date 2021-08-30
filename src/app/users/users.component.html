@@ -1,5 +1,5 @@
 
-<app-search (searchEmmiter)="createUser($event)"></app-search>
+<app-search (searchEmitter)="createUser($event)"></app-search>
 <div *ngFor = "let details of person">
     <h2>{{details.login}}</h2>
     <img src="{{details.avatar_url}}" alt="image">
@@ -7,4 +7,12 @@
     <h4>Followers:{{details.followers}}</h4>
     <h4>Following:{{details.following}}</h4>
     <h4>Repositories:{{details.public_repos}}</h4>
+</div>
+
+<div *ngFor = "let name of repo" appHighlight>
+    <h1>{{name.name}}</h1>
+    <!-- <h2>{{name.description}}</h2>
+    <h2>{{name.language}}</h2>
+    <h2>{{name.created_at}}</h2> -->
+
 </div>

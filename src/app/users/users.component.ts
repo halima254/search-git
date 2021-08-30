@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Repositories } from '../repositories';
+import { RepositoriesService } from '../repositories.service';
 import { Users } from '../users';
 import { UsersService } from '../users.service';
 
@@ -9,7 +11,8 @@ import { UsersService } from '../users.service';
 })
 export class UsersComponent implements OnInit {
 person:Users[]=[];
-  constructor( public userNeeds:UsersService) { }
+repo: Repositories[]=[];
+  constructor( public userNeeds:UsersService, public repoService:RepositoriesService) { }
   createUser( seeUser:any){
     this.userNeeds.findUser(seeUser).then(
       (success)=>{
@@ -21,6 +24,10 @@ person:Users[]=[];
         
       }
     )
+this.repoService.findRepos(seeUser).subscribe(data=>{
+  this.repo = data;
+  return(this.repo);
+})
   
   }
 

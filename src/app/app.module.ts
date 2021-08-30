@@ -11,6 +11,8 @@ import { UsersComponent } from './users/users.component';
 import { HomrComponent } from './homr/homr.component';
 import { ReposComponent } from './repos/repos.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HighlightDirective } from './highlight.directive';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     UsersComponent,
     HomrComponent,
     ReposComponent,
-    NavBarComponent
+    NavBarComponent,
+    HighlightDirective,
+    DateAgoPipe
   ],
   imports: [
     BrowserModule,

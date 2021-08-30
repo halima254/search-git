@@ -9,7 +9,7 @@ import { Users } from './users';
 })
 export class UsersService {
   user:Users[]=[];
-  myUrl='https://api.github.com/users/';
+  myUrl='https://api.github.com/users/'
 
   token = `?access_token=${environment.accessToken}`;
   constructor(private Http: HttpClient) { }
@@ -34,10 +34,10 @@ export class UsersService {
         (data:any)=>{
           this.user.push(data);
           resolve();
-          console.log(data)
+          console.log(data);
         },
         (error)=>{
-     reject();
+     reject(error)
         }
       )
       

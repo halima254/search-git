@@ -1,1 +1,22 @@
-<p>repositories works!</p>
+<!-- <div class="container">
+    <div class="container-fluid">
+<h2>Search Repo</h2>
+<h3>Type and search a Repo</h3>
+<form action="">
+    <input type="text" name="seeUser"[(ngModel)]="seeUser">
+  
+    <button (click)="provideUser()">Search User
+
+    </button>
+</form>
+</div>
+</div> -->
+
+<app-search></app-search>
+<div *ngFor = "let name of repo" appHighlight>
+    <h1>{{name.name}}</h1>
+    <h2>{{name.description}}</h2>
+    <h2>{{name.language}}</h2>
+    <h2>{{name.created_at|dateAgo}}</h2>
+
+</div>

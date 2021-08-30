@@ -1,4 +1,10 @@
 body{
-    background-image: url(/src/assets/images/github.png);
+    background-image: url("/src/assets/images/github.png");
     height: 800px;
+    width: 600px;
+}
+h1{
+    color: #006266;
+    text-shadow: 2px 2px 1px white;
+    /* margin-top: 100px; */
 }
