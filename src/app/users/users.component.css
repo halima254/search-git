@@ -1,0 +1,12 @@
+.container{
+    align-items: center;
+}
+img{
+    border-radius: 50%;
+}
+#bio{
+    text-align: center;
+}
+#repos{
+    text-align: center;
+}

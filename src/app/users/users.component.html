@@ -1,18 +1,22 @@
 
 <app-search (searchEmitter)="createUser($event)"></app-search>
-<div *ngFor = "let details of person">
+<div class="container">
+    <div class="row">
+        <br><br>
+<div *ngFor = "let details of person" id="bio" >
     <h2>{{details.login}}</h2>
     <img src="{{details.avatar_url}}" alt="image">
     <h3>Bio:{{details.bio}}</h3>
-    <h4>Followers:{{details.followers}}</h4>
-    <h4>Following:{{details.following}}</h4>
-    <h4>Repositories:{{details.public_repos}}</h4>
+    <p>Followers:{{details.followers}}</p>
+    <p>Following:{{details.following}}</p>
+    <p>Repositories:{{details.public_repos}}</p>
 </div>
 
-<div *ngFor = "let name of repo" appHighlight>
-    <h1>{{name.name}}</h1>
+<div *ngFor = "let name of repo" appHighlight class="col-sm-3" id="repos">
+    <p>{{name.name}}</p> <hr>
     <!-- <h2>{{name.description}}</h2>
     <h2>{{name.language}}</h2>
     <h2>{{name.created_at}}</h2> -->
-
+</div>
+</div>
 </div>

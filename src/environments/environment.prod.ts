@@ -1,3 +1,3 @@
 export const environment = {
-  production: true
+  production: true,  accessToken:`ghp_cslYVa2DKWWakxOqnp`,
 };
