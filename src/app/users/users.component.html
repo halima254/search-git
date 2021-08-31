@@ -10,13 +10,17 @@
     <p>Followers:{{details.followers}}</p>
     <p>Following:{{details.following}}</p>
     <p>Repositories:{{details.public_repos}}</p>
-</div>
+</div><br><br><br><br>
 
-<div *ngFor = "let name of repo" appHighlight class="col-sm-3" id="repos">
-    <p>{{name.name}}</p> <hr>
+<div *ngFor = "let name of repo" appHighlight class="col-sm-12" id="repos">
+   <div class="card text-white" id="card">
+    <div class="card-body">
+    <p>{{name.name}}</p> 
     <!-- <h2>{{name.description}}</h2>
     <h2>{{name.language}}</h2>
     <h2>{{name.created_at}}</h2> -->
+</div>
+</div>
 </div>
 </div>
 </div>
