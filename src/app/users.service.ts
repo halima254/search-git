@@ -10,9 +10,10 @@ import { Users } from './users';
 export class UsersService {
   user:Users[]=[];
   myUrl='https://api.github.com/users/'
-  hide='Yl7oLv9Al7U124qaoy'
-
-  token = `?access_token=${environment.accessToken}${this.hide}`;
+  // hide='Yl7oLv9Al7U124qaoy'
+  clientId = environment.clientId
+  clientSecretKey = environment.clientSecret
+  // token = `?access_token=${environment.accessToken}${this.hide}`;
   constructor(private Http: HttpClient) { }
 
 
@@ -30,7 +31,7 @@ export class UsersService {
     }
     return new Promise <void>((resolve, reject) => {
       this.user=[];
-      this.Http.get <data>(this.myUrl+seeUser+this.token).toPromise().then(
+      this.Http.get <data>(this.myUrl+seeUser+'?client_id='+this.clientId+'&client_secret='+this.clientSecretKey).toPromise().then(
         
         (data:any)=>{
           this.user.push(data);
